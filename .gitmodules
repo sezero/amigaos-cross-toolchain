@@ -3,7 +3,8 @@
 	url = git://github.com/cahirwpz/amigaos-binutils-2.9.1
 [submodule "submodules/gcc-2.95.3"]
 	path = submodules/gcc-2.95.3
-	url = git://github.com/cahirwpz/amigaos-gcc-2.95.3
+	url = git://github.com/sezero/amigaos-gcc-2.95.3
+	branch = 2_95_4
 [submodule "submodules/clib2"]
 	path = submodules/clib2
 	url = git://github.com/adtools/clib2
