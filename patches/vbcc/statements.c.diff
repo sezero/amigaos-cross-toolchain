@@ -1,0 +1,20 @@
+--- vbcc/statements.c	2017-08-11 10:36:49.000000000 +0300
++++ vbcc/statements.c	2021-04-04 11:11:00.000000000 +0300
+@@ -1001,7 +1001,7 @@ void continue_statement(void)
+   misra_neu(57,14,5,0);
+ #endif
+   if(cont_label==0){error(145);return;}
+-  if(block_vla[nesting]) freevl();
++  //if(block_vla[nesting]) freevl();
+   new=new_IC();
+   new->code=BRA;
+   new->typf=cont_label;
+@@ -1019,7 +1019,7 @@ void break_statement(void)
+ 	misra_global_break_counter++;
+ #endif
+   if(break_label==0){error(146);return;}
+-  if(block_vla[nesting]) freevl();
++  //if(block_vla[nesting]) freevl();
+   new=new_IC();
+   new->code=BRA;
+   new->typf=break_label;
