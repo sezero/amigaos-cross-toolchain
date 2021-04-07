@@ -405,8 +405,8 @@ def build():
   """
 
   ARCH = '-m32' if platform.machine() == 'x86_64' else ''
-  CC = ' '.join([CC, ARCH, '-std=gnu11'])
-  CXX = ' '.join([CXX, ARCH, '-std=gnu++11'])
+  CC = ' '.join([CC, ARCH, '-std=gnu99'])
+  CXX = ' '.join([CXX, ARCH, '-std=gnu++98'])
 
   """
   Older gcc compilers (i.e. 2.95.3 and 3.4.6) and binutils have to be tricked
