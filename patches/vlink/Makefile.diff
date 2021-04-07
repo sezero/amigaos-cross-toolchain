@@ -1,0 +1,11 @@
+--- vlink/Makefile	2020-09-28 18:47:56.000000000 +0300
++++ vlink/Makefile	2021-04-04 11:11:10.000000000 +0300
+@@ -6,7 +6,7 @@
+ 
+ CC = gcc
+ CCOUT = -o $(DUMMYVARIABLE)	# produces the string "-o "
+-COPTS = -std=c99 -Wpedantic -O2 -fomit-frame-pointer -c
++COPTS = -std=c99 -O2 -fomit-frame-pointer -c
+ CONFIG =
+ 
+ LD = $(CC)

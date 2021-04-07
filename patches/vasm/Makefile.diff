@@ -1,0 +1,11 @@
+--- vasm/Makefile	2020-11-26 13:16:58.000000000 +0300
++++ vasm/Makefile	2021-04-04 11:11:10.000000000 +0300
+@@ -7,7 +7,7 @@
+           -DOUTXFIL -DOUTIHEX
+ 
+ CCOUT = -o
+-COPTS = -c -std=c99 -O2 -Wpedantic -DUNIX $(OUTFMTS)
++COPTS = -c -std=c99 -O2 -DUNIX $(OUTFMTS)
+ 
+ LD = $(CC)
+ LDOUT = $(CCOUT)

@@ -37,7 +37,6 @@ URLS = \
    ('http://server.owl.de/~frank/vbcc/current/vbcc_target_m68k-amigaos.lha',
     'vclib.lha')]
 
-
 MULTILIB = [('', []),
             ('libb', ['-fbaserel', '-DSMALL_DATA']),
             ('libm020', ['-m68020']),
@@ -364,9 +363,11 @@ def build():
   prepare_target()
 
   unpack('vasm', work_dir='{build}')
+  patch('vasm', work_dir='{build}')
   make('vasm', CPU='m68k', SYNTAX='mot')
 
   unpack('vlink', work_dir='{build}')
+  patch('vlink', work_dir='{build}')
   build_vlink()
 
   unpack('vbcc')
